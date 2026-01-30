@@ -352,6 +352,30 @@
             color: var(--accent-cyan);
         }
 
+        /* Profile Image */
+        .profile-image-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-cyan);
+            box-shadow:
+                0 0 30px rgba(0, 212, 255, 0.3),
+                0 10px 40px rgba(0, 0, 0, 0.4);
+            animation: profileGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes profileGlow {
+            0%, 100% { box-shadow: 0 0 30px rgba(0, 212, 255, 0.3), 0 10px 40px rgba(0, 0, 0, 0.4); }
+            50% { box-shadow: 0 0 50px rgba(0, 212, 255, 0.5), 0 10px 40px rgba(0, 0, 0, 0.4); }
+        }
+
         /* Hero Visual */
         .hero-visual {
             position: relative;
@@ -1120,6 +1144,9 @@
                     </div>
                 </div>
                 <div class="hero-visual">
+                    <div class="profile-image-container">
+                        <img src="2mig.jpg" alt="Staffan Greisz" class="profile-image">
+                    </div>
                     <div class="terminal">
                         <div class="terminal-header">
                             <div class="terminal-dot red"></div>
